@@ -17,6 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 $api = app('Dingo\Api\Routing\Router');
-$api->version('v1', function ($api) {
-    $api->get('users', 'App\Http\Controllers\Api\CalculatorController@show');
+$api->version('v1',array('prefix' => 'api/v1'), function ($api) {
+    $api->get('calulcateDate/{initialDate}/{delay}', 'App\Http\Controllers\Api\CalculatorController@show');
+    $api->post('calulcateDate', 'App\Http\Controllers\Api\CalculatorController@show');
 });

@@ -1,0 +1,71 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Test",
+		"_postman_id": "b51cf00a-fbfd-b252-f1d2-e8ec1d806e07",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Calculate Holidays",
+			"request": {
+				"url": "http://127.0.0.1:9090/api/v1/calulcateDate/2019-01-01T10:10:10Z/100",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"value": "",
+							"description": "",
+							"type": "file"
+						},
+						{
+							"key": "user_id",
+							"value": "42",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "DESC test ",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Holidays Post",
+			"request": {
+				"url": "http://127.0.0.1:9090/api/v1/calulcateDate",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "initialDate",
+							"value": "2019-01-01T10:10:10Z",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "delay",
+							"value": "100",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
